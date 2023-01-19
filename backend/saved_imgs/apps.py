@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UploadedImgConfig(AppConfig):
+class SavedImgsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'uploaded_img'
+    name = 'saved_imgs'
