@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,9 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'cars.apps.CarsConfig',
     'external_imgs',
-    'profiles',
     'saved_imgs',
-    'uploaded-imgs',
+    'uploaded_imgs',
       # This app is for example use only
 ]
 
@@ -155,6 +155,9 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(days=10),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=20),
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 try:
     from drf_jwt_backend.local_settings import *
