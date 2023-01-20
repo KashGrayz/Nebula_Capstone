@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "bb1b21fc-2f4e-4d5f-9473-10d9915573b3",
+		"name": "Nebula_Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24341228"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dantheman\",\r\n    \"password\": \"password1@\",\r\n    \"email\": \"dan@devcodecamp.com\",\r\n    \"first_name\": \"Daniel\",\r\n    \"last_name\": \"Tulpa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"KGrayz\",\r\n    \"password\": \"KashG093!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh_Access",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"PASTE REFRESH TOKEN FROM LOGIN HERE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "GET all cars (unprotected)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/all/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								"all",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET cars for user (protected)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST new car for user (protected)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"make\": \"Subaru\",\n    \"model\": \"Impreza 2.5rs\",\n    \"year\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Uploaded_Imgs",
+			"item": [
+				{
+					"name": "Get_Uploads",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/uploaded",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"uploaded"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post new upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"img_name\": \"astronaut\",\n        \"upload_date\": \"\",\n        \"img_description\": \"\",\n        \"user\":{},\n        \"image\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/uploaded/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"uploaded",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Saved_Imgs",
+			"item": [
+				{
+					"name": "Get user saved images",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/saved/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"saved",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post new saved image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"img_name\":\"\",\n    \"upload_date\":\"\",\n    \"img_description\":\"\",\n    \"user\":{}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/saved/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"saved",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "External_Imgs",
+			"item": [
+				{
+					"name": "Get external images",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Post new external image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDk4MzQxLCJpYXQiOjE2NzQyMzQzNDEsImp0aSI6ImIyZjUyMmRkY2QwZTQxMDJhZTFiYWI5NjI1YmIyYzBiIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJLR3JheXoiLCJmaXJzdF9uYW1lIjoiIiwibGFzdF9uYW1lIjoiIn0.I2D_jPr0LLV0SwThcsFl1SEinDuox8NtotN0R8uLUtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nasa_id\":\"\",\n    \"user\":{}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/external/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"external",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
