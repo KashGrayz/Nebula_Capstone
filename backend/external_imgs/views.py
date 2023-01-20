@@ -9,7 +9,7 @@ from .serializers import ExternalImageSerializer
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def ext_images(request):
+def app_external_images(request):
     print(
         'User ', f"{request.user.id} {request.user.email} {request.user.username}")
     if request.method == 'POST':
