@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
-import axios from 'axios';
+
+
+//Page to display search results
 
 const SearchPage = () => {
-    const [search, setSearch] = 
 
-    const fetchNasa = async => {
-        try {
-            let response = await axios.get("https://images-api.nasa.gov/search?q=Nebula")
-        }
-    }
+    return(
+        <div>
+
+        </div>
+    )
 }
+
+export default SearchPage;
