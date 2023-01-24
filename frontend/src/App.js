@@ -32,7 +32,7 @@ function App() {
       }
       else{
         setImage(response.data);
-        console.log(response.data)
+        console.log('Images:', response.data)
       }
     }
     catch (error) {
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div>
-      <Navbar search={search} setSearch={setSearch} getImages={getImages}/>
+      <Navbar search={search} setSearch={setSearch} getImages={getImages} image={image}/>
       <Routes>
         <Route
           path="/"

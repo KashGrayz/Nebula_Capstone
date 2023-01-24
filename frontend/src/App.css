@@ -9,9 +9,17 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+  background-image: url("./two_faced_whirlpool_galaxy.jpeg");
+  background-size: cover;
+  background-position-y: -324px;
+  overscroll-behavior: none;
+}
+
 html {
   box-sizing: border-box;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 p {
@@ -20,8 +28,8 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  border: transparent;
+  color: rgb(0, 0, 0);
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -30,8 +38,8 @@ button {
 
 button:hover {
   cursor: pointer;
-  color: white;
-  background-color: rgb(237, 237, 237);
+  color: rgba(28, 201, 248, 0.666);
+  background-color: rgba(27, 146, 249, 0.768);
 }
 
 .container {
@@ -47,6 +55,15 @@ button:hover {
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
+  border: transparent;
+  background-color: rgba(255, 255, 255, 0.342);
+  backdrop-filter: blur(6px);
+  margin: auto;
+  height: auto;
+  width: 20rem;
+  padding: 3rem;
+  border-radius: 10px;
+  
 }
 
 .form input {

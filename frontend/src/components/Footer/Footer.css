@@ -6,4 +6,7 @@ footer {
   padding: 1rem;
   text-align: center;
   width: 100%;
+  color: rgb(0 0 0);
+  -webkit-text-stroke: 1px #54BCB8;
+  text-shadow: 0px 1px 6px #8effe1;
 }

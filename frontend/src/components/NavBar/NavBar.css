@@ -9,22 +9,25 @@ li {
 }
 
 .navBar {
-  background: steelblue;
-  box-shadow: 4px 2px 5px gray;
+  background: rgba(0, 0, 0, 0.381);
   color: rgb(59, 59, 59);
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
+  backdrop-filter: blur(6px);
 }
 
 .navBar button {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 0.4rem 0.5rem;
+  background: black;
+  border: 1px solid #000000;
+  padding: 0.5em 0.5rem;
+  border-radius: 10px;
+  color: rgb(251, 248, 248);
+  -webkit-text-stroke: .4px #54BCB8;
+  text-shadow: 0px 1px 6px #8effe1;
 }
 
 .navBar button:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.313);
   color: steelblue;
   cursor: pointer;
 }
@@ -32,4 +35,12 @@ li {
 .brand {
   cursor: pointer;
   font-size: 2rem;
+  color:black;
+  color: rgb(0 0 0);
+  -webkit-text-stroke: 1 #54BCB8;
+  text-shadow: 0px 1px 6px #8effe1;
+  
 }
+/* color: rgb(0 0 0);
+-webkit-text-stroke: 1px #54BCB8;
+text-shadow: 0px 1px 6px #8effe1; */

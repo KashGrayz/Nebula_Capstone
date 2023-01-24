@@ -1,11 +1,15 @@
 // fetch images by search keyword
 
+import {useNavigate} from 'react-router-dom'
+
 function SearchBar({search, setSearch, getImages}) {
 
     function handleSubmit(event){
         event.preventDefault();
         getImages(search);
+        console.log(`Search:`, search)
         setSearch('')
+
     }
     return (
         <div>
@@ -14,9 +18,8 @@ function SearchBar({search, setSearch, getImages}) {
                     type='text' 
                     placeholder="Search..." 
                     onChange={(event) => setSearch(event.target.value)} 
-                    value={search}>
-                </input>
-                <button type="submit">Search</button>
+                    value={search}/>
+                <button type="submit">Launch</button>
             </form>
         </div>
     )
