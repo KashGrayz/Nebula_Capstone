@@ -16,14 +16,13 @@ import Footer from "./components/Footer/Footer";
 import PrivateRoute from "./utils/PrivateRoute";
 import { useEffect, useState } from "react";
 import useAuth from "./hooks/useAuth";
-import SearchPage from "./pages/SearchPage/SearchPage";
 import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
 
   const [search, setSearch] = useState();
   const [user, token] = useAuth();
-  const [image, setImage]= useState();
+  const [image, setImage]= useState([]);
   
   async function getImages(searchTerm) {
     try{
@@ -32,6 +31,7 @@ function App() {
         alert('The Image you are looking for is not available')
       }
       else{
+        console.log(response.data)
         setImage(response.data);
         console.log('Images info:', response.data.collection.items)
       }
@@ -40,14 +40,7 @@ function App() {
       alert('Houston we have a problem')
     }
   }
-//     async function getPhotos(){
-//     let response = await axios.get('https://images-api.nasa.gov/search?q=nebula&media_type=image')
-//     setFeaturedImages(response.data)
-//     console.log('Featured Images:', response.data.collection.items[0].href)
-// }
-//   useEffect(()=>{
-//       getPhotos()
-//   },[])
+
 
   useEffect(()=>{
     getImages()
@@ -65,7 +58,6 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/search" element={<SearchPage search={search} setSearch={setSearch}  getImages={getImages} image={image} setImage={setImage}/>} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/landing" element={<LandingPage />} />

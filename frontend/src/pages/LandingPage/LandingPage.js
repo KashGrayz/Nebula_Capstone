@@ -1,68 +1,62 @@
-// import React, { useState, useEffect } from 'react';
-// import useAuth from '../../hooks/useAuth';
-// import axios from 'axios';
-
-// const LandingPage = (featuredimages, setFeaturedImages) => {
-
-
-//     useEffect(() => {
-//       let response = axios.get("'https://images-api.nasa.gov/search?q=nebula&media_type=image'")
-//       setFeaturedImages(response.data);
-//     }, []);
-  
-//     return (
-//       <div>
-//         {featuredimages.map(featuredimages => (
-//           <img src={featuredimages.links[0].href} />
-//         ))}
-//       </div>
-//     );
-// }
-
-// export default LandingPage;
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './LandingPage.css'
+import "./LandingPage.css";
 
 function LandingPage() {
   const [images, setImages] = useState([]);
-  const [hoveredImage, setHoveredImage] = useState(null);
+  const [query, setQuery] = useState("Nebula");
 
+  function handleSubmit(event) {
+    event.preventDefault();
+   
+    getImages()
+  }
 
-  useEffect(() => {
-    axios.get("https://images-api.nasa.gov/search", {
-      params: {
-        q: "nebula",
-        media_type: "image"
-      }
-    })
-      .then(response => {
+  function getImages() {
+    axios
+      .get("https://images-api.nasa.gov/search", {
+        params: {
+          q: query,
+          media_type: "image",
+        },
+      })
+      .then((response) => {
         setImages(response.data.collection.items);
       })
-      .catch(error => console.log(error));
-  }, []);
+      .catch((error) => console.log(error));
+  }
+
+  useEffect(() => {getImages()}, []);
 
   return (
     <div>
-        <h3>Find all your NASA images here on NEBULA. Search for images or create a profile to upload or save your favorites. Enjoy exploring!</h3>
-          <div>
-              {images.map(image => (
-                <div key={image.data[0].nasa_id}
-                onMouseEnter={() => setHoveredImage(image)}
-                onMouseLeave={() => setHoveredImage(null)}
-                >
-              <img   src={image.links[0].href} alt={image.data[0].title} info={image.data[0].description}
-              />
-              {hoveredImage === image && (
-                <div>
-                  <p>Title: {image.data[0].title}</p>
-                  <p>Description: {image.data[0].description}</p>
-                </div>
-              )}
-              </div>
-                ))}
+      <div>
+        <h3>
+          Find all your NASA images here on NEBULA. Search for images or create
+          a profile to upload or save your favorites. Enjoy exploring!
+        </h3>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={(event) => setQuery(event.target.value)}
+          value={query}
+        />
+        <button type="submit">Launch</button>
+      </form>
+      <div>
+        <div className="photo">
+          {images.map((image) => (
+            <img
+              key={image.data[0].nasa_id}
+              src={image.links[0].href}
+              alt={image.data[0].title}
+              info={image.data[0].description}
+            />
+          ))}
         </div>
+      </div>
     </div>
   );
 }
