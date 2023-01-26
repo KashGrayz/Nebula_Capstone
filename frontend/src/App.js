@@ -17,6 +17,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import { useEffect, useState } from "react";
 import useAuth from "./hooks/useAuth";
 import SearchPage from "./pages/SearchPage/SearchPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
 
@@ -32,13 +33,21 @@ function App() {
       }
       else{
         setImage(response.data);
-        console.log('Images:', response.data)
+        console.log('Images info:', response.data.collection.items)
       }
     }
     catch (error) {
       alert('Houston we have a problem')
     }
   }
+//     async function getPhotos(){
+//     let response = await axios.get('https://images-api.nasa.gov/search?q=nebula&media_type=image')
+//     setFeaturedImages(response.data)
+//     console.log('Featured Images:', response.data.collection.items[0].href)
+// }
+//   useEffect(()=>{
+//       getPhotos()
+//   },[])
 
   useEffect(()=>{
     getImages()
@@ -56,9 +65,10 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/search" element={<SearchPage search={search} setSearch={setSearch}  getImages={getImages} />} />
+        <Route path="/search" element={<SearchPage search={search} setSearch={setSearch}  getImages={getImages} image={image} setImage={setImage}/>} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/landing" element={<LandingPage />} />
       </Routes>
       <Footer />
     </div>

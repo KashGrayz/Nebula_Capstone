@@ -11,9 +11,15 @@
 
 body{
   background-image: url("./two_faced_whirlpool_galaxy.jpeg");
+  background-size:contain;
+  overflow-y: auto;
   background-size: cover;
-  background-position-y: -324px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overscroll-behavior: none;
+  background-position-y: -350px;
+  
 }
 
 html {

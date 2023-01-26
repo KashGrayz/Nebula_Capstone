@@ -1,14 +1,17 @@
 // fetch images by search keyword
-
 import {useNavigate} from 'react-router-dom'
-
-function SearchBar({search, setSearch, getImages}) {
+import './SearchBar.css'
+function SearchBar({search, setSearch, getImages, image}) {
+    const navigate = useNavigate();
+    
 
     function handleSubmit(event){
         event.preventDefault();
         getImages(search);
         console.log(`Search:`, search)
-        setSearch('')
+        console.log('Searched Images:', image)
+
+        
 
     }
     return (

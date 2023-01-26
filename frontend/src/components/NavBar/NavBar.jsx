@@ -5,7 +5,7 @@ import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";
 
-const Navbar = ({search, setSearch, getImages}) => {
+const Navbar = ({search, setSearch, getImages, image}) => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
@@ -17,7 +17,7 @@ const Navbar = ({search, setSearch, getImages}) => {
           </Link>
         </li>
         <li>
-          <SearchBar search={search} setSearch={setSearch}  getImages={getImages}  />
+          <SearchBar search={search} setSearch={setSearch}  getImages={getImages}   image={image}/>
         </li>
         <li>
           {user ? (
