@@ -19,6 +19,7 @@ body{
   background-repeat: no-repeat;
   overscroll-behavior: none;
   background-position-y:-30rem;
+  position: relative;
   
 }
 

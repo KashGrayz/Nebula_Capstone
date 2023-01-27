@@ -26,6 +26,8 @@ const HomePage = () => {
     };
     fetchCars();
   }, [token]);
+  console.log(user)
+  console.log('Token:',token)
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>

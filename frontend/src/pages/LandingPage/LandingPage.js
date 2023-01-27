@@ -1,9 +1,8 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import "./LandingPage.css";
 
-const ImageContext = createContext();
 
 function LandingPage() {
   const [image, setImage] = useState([]);
@@ -13,12 +12,12 @@ function LandingPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
-   
     getImages()
   }
 
-  function handleClick(){
-    navigate(`/details`
+  function handleClick(image){
+    setImage(image)
+    navigate(`/details`, {state :{ image:image }}
     );
   }
 
@@ -59,7 +58,6 @@ function LandingPage() {
       </form>
       <div>
         <div className="photo">
-          <ImageContext.Provider value={image}>
           {image.map((image) => (
             <img
               key={image.data[0].nasa_id}
@@ -69,7 +67,6 @@ function LandingPage() {
               onClick={() => handleClick(image)}
             />
           ))}
-          </ImageContext.Provider>
         </div>
       </div>
     </div>
