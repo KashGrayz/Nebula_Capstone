@@ -14,7 +14,7 @@
 
 .photo{
     --gap: 15px;
-    --num-cols:4;
+    --num-cols:3;
 
     box-sizing: border-box;
     padding: var(--gap);
@@ -26,7 +26,7 @@
     margin-right: 8rem;
     background-color: rgba(0, 0, 0, 0.471);
     backdrop-filter: blur(6px);
-    border-radius: 10PX;
+    border-radius: 10px;
     overflow: auto;
     height: 91vh;
     border: solid 2px #050b0b;

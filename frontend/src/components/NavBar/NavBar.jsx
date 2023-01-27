@@ -12,7 +12,7 @@ const Navbar = ({search, setSearch, getImages, image}) => {
     <div className="navBar">
       <ul>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color:"black"}}>
+          <Link to="/landing" style={{ textDecoration: "none", color:"black"}}>
             <b>NEBULA</b>
           </Link>
         </li>

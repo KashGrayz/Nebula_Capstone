@@ -1,15 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
+import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import "./LandingPage.css";
 
+const ImageContext = createContext();
+
 function LandingPage() {
-  const [images, setImages] = useState([]);
+  const [image, setImage] = useState([]);
   const [query, setQuery] = useState("Nebula");
+  const navigate = useNavigate();
+  
 
   function handleSubmit(event) {
     event.preventDefault();
    
     getImages()
+  }
+
+  function handleClick(){
+    navigate(`/details`
+    );
   }
 
   function getImages() {
@@ -21,7 +31,8 @@ function LandingPage() {
         },
       })
       .then((response) => {
-        setImages(response.data.collection.items);
+        setImage(response.data.collection.items);
+        console.log('Images info:', response.data.collection.items)
       })
       .catch((error) => console.log(error));
   }
@@ -38,6 +49,7 @@ function LandingPage() {
       </div>
       <form onSubmit={handleSubmit}>
         <input
+
           type="text"
           placeholder="Search..."
           onChange={(event) => setQuery(event.target.value)}
@@ -47,14 +59,17 @@ function LandingPage() {
       </form>
       <div>
         <div className="photo">
-          {images.map((image) => (
+          <ImageContext.Provider value={image}>
+          {image.map((image) => (
             <img
               key={image.data[0].nasa_id}
               src={image.links[0].href}
               alt={image.data[0].title}
               info={image.data[0].description}
+              onClick={() => handleClick(image)}
             />
           ))}
+          </ImageContext.Provider>
         </div>
       </div>
     </div>
