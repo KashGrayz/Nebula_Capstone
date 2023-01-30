@@ -10,10 +10,12 @@ function ImageDetails(){
     return(
         <div className='details'>
             <img className='image' src={state.image?.links[0].href} alt={state.image.data[0].title}/>
-            <div className='text'>
-                <h1>{state.image.data[0].title}</h1>
-                <br></br>
-                <h3>{state.image.data[0].description}</h3> 
+            <div>
+                <h1 className='text'>{state.image.data[0].title}</h1>
+                <br/>
+                <p>NASA ID: {state.image.data[0].nasa_id}</p>
+                <p>{state.image.data[0].description}</p> 
+                <p>Date Created: {state.image.data[0].date_created}</p>
              </div>
         </div>
     )

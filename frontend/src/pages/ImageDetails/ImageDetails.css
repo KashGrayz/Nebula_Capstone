@@ -2,15 +2,15 @@
     color: rgb(0 0 0);
     -webkit-text-stroke: 1px #54BCB8;
     text-shadow: 0px 1px 6px #8effe1;
-    padding: 2rem;
-   
+    text-align: center;
+    padding: 10px;
 }
 
 .details{
     display: flex;
     padding: 1rem;
     border: solid 1px; 
-    background: rgba(0, 0, 0, 0.381);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(6px);
     width: 80%;
     margin: auto;
@@ -19,10 +19,14 @@
     border-radius: 10px;
     
 }
-.image{
-    align-self: center;
+
+div > p{
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: .5px #000000;
+    text-shadow: 0px 0px 3px #54BCBB;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-div > h1{
-border: transparent;
-}

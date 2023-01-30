@@ -4,7 +4,7 @@ import useAuth from "../../hooks/useAuth";
 
 import axios from "axios";
 
-const HomePage = () => {
+const ProfilePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
@@ -31,14 +31,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
     </div>
   );
 };
 
-export default HomePage;
+export default ProfilePage;

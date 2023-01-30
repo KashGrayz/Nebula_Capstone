@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
-import SearchBar from "../SearchBar/SearchBar";
+
 
 const Navbar = ({search, setSearch, getImages, image}) => {
   const { logoutUser, user } = useContext(AuthContext);
@@ -17,7 +17,9 @@ const Navbar = ({search, setSearch, getImages, image}) => {
           </Link>
         </li>
         <li>
-          <SearchBar search={search} setSearch={setSearch}  getImages={getImages}   image={image}/>
+          <Link to="/profilepage" >
+              <img src="./planets-1515751-1286060.webp" alt="" style={{ width: "30px", height:"30px"}}></img>
+          </Link>
         </li>
         <li>
           {user ? (

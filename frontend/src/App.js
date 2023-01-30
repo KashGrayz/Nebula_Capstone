@@ -4,7 +4,7 @@ import "./App.css";
 
 
 // Pages Imports
-import HomePage from "./pages/HomePage/HomePage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
@@ -27,10 +27,10 @@ function App() {
       <Navbar/>
       <Routes>
         <Route
-          path="/"
+          path="/profilepage"
           element={
             <PrivateRoute>
-              <HomePage />
+              <ProfilePage />
             </PrivateRoute>
           }
         />
