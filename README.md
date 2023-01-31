@@ -1,18 +1,31 @@
-# ReactDjango_JWT_StarterCode
+My App is called Nebula, It’s a HD NASA Image site where any user can search and find real images from our universe and related images. You can also create a profile where you can save images to your profile for later, upload images and search other users uploads.
+It will solve the problem of finding awesome images for websites, school projects or even youtube thumbnails.
+The API I will be using is https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf to search images by keywords and return the image, title, description and photographer information.
+My technical wow factor is a Solar system diagram that will return images from each planet / moon selected. This will allow a user thats creating a project to be able to quickly select what they’re looking for with out needing the search function
 
-Starter code for full stack React + Django applications using JWT for authentication/authorization and a fully working register/login system on the React side
+As an image seeker, I want to have access and be able to search for 
+high quality NASA images so that I can use them at a later date. (NASA Api)
 
-## NOTE
+As an image seeker, I want to have a profile, so that I can save, share and
+upload images.
 
-"cars" app in Django backend for example purposes only. Study it closely and review provided resources to understand how to properly create protected endpoints that require a JWT token for authorization.
+As an image enthusiast, I want to be able to upload images with a title, 
+description and “tags” (Pillow)
 
-## For implementing user roles
+As an image seeker I want to see the image, title, description and 
+photography information from a searched photo.
 
-- see comments in the following files in the order they are listed
-  - backend/authentication/models.py
-  - backend/authentication/serializers.py (note that there are several places needing modification in that file)
-- If modifying the User class in authentication/models.py, make sure to drop your existing database,
-  create it, and run migrations from scratch
-- for a great reference, see the following article: https://simpleisbetterthancomplex.com/tutorial/2018/01/18/how-to-implement-multiple-user-types-with-django.html
-  - note that this article is from 2018 and dealing with a full stack Django application scenario with HTML/CSS templates. The principles of setting up the backend portion for User roles is still valid!
-- once user roles are set up on your backend, you can now utilize them on the frontend. Recommend reviewing the React Router slideshow for ideas on how to use descendant routes and conditional rendering to control who can access what parts of your application based on a role!
+As an image seeker I want to see related photos of the selected image.
+
+As an image seeker, I want to have a landing page, so that I can see 
+popular images before searching for images
+
+As an image seeker, I want to have a search page, so I can search for 
+images by keyword or “tag”
+
+As an image enthusiast, I want to be able to rate images on a scale of 1-
+5, so other user can see the average rating of the images
+
+As a developer, I want to have an aesthetically pleasing and intuitive user 
+interface/user experience (UI/UX) with all features of the application stylized. (CSS, 
+Bootstrap, Material UI, etc.)  
