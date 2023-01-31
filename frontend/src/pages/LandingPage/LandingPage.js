@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import "./LandingPage.css";
+import Footer from "../../components/Footer/Footer";
 
 
 function LandingPage() {
@@ -71,6 +72,7 @@ function LandingPage() {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

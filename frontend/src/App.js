@@ -39,7 +39,7 @@ function App() {
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/details" element={<ImageDetails/>} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

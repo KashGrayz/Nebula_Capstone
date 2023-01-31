@@ -15,7 +15,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/uploaded/get_stuff/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/uploaded/get_data/", {
           headers: {
             Authorization: "Bearer " + token,
           },
@@ -38,6 +38,7 @@ const ProfilePage = () => {
         { isLoaded ? data.uploaded_imgs.map((el) => (
           <><img
           src={`http://127.0.0.1:8000${el.image}`}
+          alt={`http://127.0.0.1:8000${el.image_name}`}
           />
           hello
           </>
