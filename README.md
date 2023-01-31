@@ -1,7 +1,7 @@
 My App is called Nebula, It’s a HD NASA Image site where any user can search and find real images from our universe and related images. You can also create a profile where you can save images to your profile for later, upload images and search other users uploads.
 It will solve the problem of finding awesome images for websites, school projects or even youtube thumbnails.
 The API I will be using is https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf to search images by keywords and return the image, title, description and photographer information.
-My technical wow factor is a Solar system diagram that will return images from each planet / moon selected. This will allow a user thats creating a project to be able to quickly select what they’re looking for with out needing the search function
+
 
 As an image seeker, I want to have access and be able to search for 
 high quality NASA images so that I can use them at a later date. (NASA Api)
