@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom'
 import './ImageDetails.css'
+import StarRating from '../../components/StarRating/StarRating';
  
 function ImageDetails(){
 
@@ -18,7 +19,7 @@ function ImageDetails(){
                 <p>Date Created: {state.image.data[0].date_created}</p>
              </div>
              <div>
-                
+                <StarRating/>
              </div>
         </div>
     )

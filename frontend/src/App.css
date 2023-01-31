@@ -33,22 +33,6 @@ p {
   font-size: 20px;
 }
 
-button {
-  background-color: transparent;
-  border: transparent;
-  color: rgb(0, 0, 0);
-  font-size: 1rem;
-  font-family: inherit;
-  max-width: 100px;
-  padding: 0.5rem 0.5rem;
-}
-
-button:hover {
-  cursor: pointer;
-  color: rgba(28, 201, 248, 0.666);
-  background-color: rgba(27, 146, 249, 0.768);
-}
-
 .container {
   margin: 0 auto;
   max-width: 600px;

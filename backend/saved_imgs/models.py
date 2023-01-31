@@ -3,9 +3,6 @@ from authentication.models import User
 from uploaded_imgs.models import Uploaded_img
 
 
-
-# Create your models here.
-
 class Saved_Img(models.Model):
     img_name = models.CharField(max_length=255)
     upload_date = models.DateTimeField(auto_now_add=True)

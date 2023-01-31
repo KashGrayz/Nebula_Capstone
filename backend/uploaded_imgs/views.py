@@ -29,7 +29,7 @@ def user_uploads(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def get_stuff(request):
+def get_data(request):
     if request.method == 'GET':
         image_1 = Uploaded_img.objects.filter(user_id=request.user.id)
         serializer1 = Uploaded_imgSerializer(image_1, many=True)

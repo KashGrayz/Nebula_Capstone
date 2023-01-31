@@ -3,5 +3,5 @@ from uploaded_imgs import views
 
 urlpatterns = [
     path('', views.user_uploads),
-    path('get_stuff/', views.get_stuff)
+    path('get_data/', views.get_data)
 ]

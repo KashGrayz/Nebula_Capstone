@@ -9,11 +9,11 @@ const ProfilePage = () => {
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
-  const [stuff, setStuff] = useState({});
+  const [data, setData] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const fetchStuff = async () => {
+    const fetchData = async () => {
       try {
         let response = await axios.get("http://127.0.0.1:8000/api/uploaded/get_stuff/", {
           headers: {
@@ -21,21 +21,21 @@ const ProfilePage = () => {
           },
         });
         console.log(response.data)
-        setStuff(response.data);
+        setData(response.data);
         setIsLoaded(true)
   
       } catch (error) {
         console.log(error.response.data);
       }
     };
-    fetchStuff();
+    fetchData();
   }, [token]);
 
   return (
-    <div className="container">
+    <div>
       <h1>Welcome {user.username}!</h1>
       <div>
-        { isLoaded ? stuff.uploaded_imgs.map((el) => (
+        { isLoaded ? data.uploaded_imgs.map((el) => (
           <><img
           src={`http://127.0.0.1:8000${el.image}`}
           />
