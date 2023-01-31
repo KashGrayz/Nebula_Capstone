@@ -18,6 +18,7 @@ li {
   box-shadow: 0px 1px 6px 2px rgb(255, 113, 113);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: relative;
   
 }
 
@@ -46,6 +47,17 @@ li {
   -webkit-text-stroke: 1 #54BCB8;
   text-shadow: 0px 1px 6px #8effe1;
   
+}
+
+.logo{
+  height:30px;
+  width:30px;
+  border: 32px 32px transparent ;
+  border-radius: 30px;
+  box-shadow: 0px 0px 6px #8effe1;
+  background-color: #54BCB8;
+  
+
 }
 /* color: rgb(0 0 0);
 -webkit-text-stroke: 1px #54BCB8;

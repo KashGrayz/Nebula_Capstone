@@ -13,9 +13,12 @@ function ImageDetails(){
             <div>
                 <h1 className='text'>{state.image.data[0].title}</h1>
                 <br/>
-                <p>NASA ID: {state.image.data[0].nasa_id}</p>
-                <p>{state.image.data[0].description}</p> 
+                <p><i>NASA ID:</i> {state.image.data[0].nasa_id}</p>
+                <p className='description'>{state.image.data[0].description}</p> 
                 <p>Date Created: {state.image.data[0].date_created}</p>
+             </div>
+             <div>
+                
              </div>
         </div>
     )

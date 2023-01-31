@@ -3,9 +3,10 @@ import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
+import logo from './astronaut.png'
 
 
-const Navbar = ({search, setSearch, getImages, image}) => {
+const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
@@ -17,8 +18,8 @@ const Navbar = ({search, setSearch, getImages, image}) => {
           </Link>
         </li>
         <li>
-          <Link to="/profilepage" >
-              <img src="./planets-1515751-1286060.webp" alt="" style={{ width: "30px", height:"30px"}}></img>
+          <Link to="/">
+              <img src={logo} alt="profile icon" className="logo"/>
           </Link>
         </li>
         <li>

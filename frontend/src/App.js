@@ -27,7 +27,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route
-          path="/profilepage"
+          path="/"
           element={
             <PrivateRoute>
               <ProfilePage />

@@ -42,10 +42,11 @@ function LandingPage() {
     <div>
       <div>
         <h3>
-          Find all your NASA images here on NEBULA. Search for images or create
-          a profile to upload or save your favorites. Enjoy exploring!
+          Find all your NASA images here on NEBULA. Search for images, create
+          a profile to upload, and save your favorites. Enjoy exploring!
         </h3>
       </div>
+      <div>
       <form onSubmit={handleSubmit}>
         <input
 
@@ -56,6 +57,7 @@ function LandingPage() {
         />
         <button type="submit">Launch</button>
       </form>
+      </div>
       <div>
         <div className="photo">
           {image.map((image) => (
