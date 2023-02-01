@@ -46,14 +46,20 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
-  border: transparent;
-  background-color: rgba(255, 255, 255, 0.342);
+  border: solid 1px #54BCB8;
+  background: rgba(0, 0, 0, 0.665);
   backdrop-filter: blur(6px);
   margin: auto;
   height: auto;
   width: 20rem;
   padding: 3rem;
   border-radius: 10px;
+  color: #54BCB8;
+  box-shadow: 0px 1px 6px 4px #72fffa;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: .5px #083534;
+    text-shadow: 0px 1px 3px #136767;
   
 }
 
@@ -64,4 +70,16 @@ p {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  border-radius: 10px;
+  color: #54BCB8;
+  border: solid 1px #54BCB8;
+  background-color: rgba(0, 0, 0, 0.154);
+  backdrop-filter: blur(6px);
+}
+
+.form input:focus{
+  outline: none;
+  box-shadow: 0px 1px 6px 4px #72fffa;
+  text-shadow: none;
+  -webkit-text-stroke: none;
 }

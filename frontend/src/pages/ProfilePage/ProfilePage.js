@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-
+import "./ProfilePage.css"
 import axios from "axios";
 
 const ProfilePage = () => {
@@ -33,17 +33,60 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <h1>Welcome {user.username}!</h1>
-      <div>
+      <h3 className="welcome">Welcome {user.username}!</h3>
+      <div className="profile">
         { isLoaded ? data.uploaded_imgs.map((el) => (
           <><img
           src={`http://127.0.0.1:8000${el.image}`}
           alt={`http://127.0.0.1:8000${el.image_name}`}
           />
-          hello
           </>
           
         )):null}
+      </div>
+      <div className="container-data">
+        <div className="InfoTable">
+          <table>
+            <caption className="welcome2">Saved User Image Data</caption>
+            <thead>
+              <tr className="InfoHeaders">
+              <td>Name</td>
+              <td>Description</td>
+              <td>Upload Date</td>
+            </tr>
+            </thead>
+            <tbody>
+              {isLoaded ? data.saved_imgs.map((el) => { 
+                return (
+                  <tr>
+                    <td>{el.img_name}</td>
+                    <td>{el.img_description}</td>
+                    <td>{el.upload_date}</td>
+                  </tr>
+                );
+              }):null}
+            </tbody>
+          </table>
+        </div>
+        <div className="InfoTable">
+          <table>
+            <caption className="welcome2">Saved Nasa Image Data</caption>
+            <thead>
+              <tr className="InfoHeaders">
+                <td>Nasa ID</td>
+              </tr>
+            </thead>
+            <tbody>
+              {isLoaded ? data.external_imgs.map((el) => {
+                return(
+                <tr>
+                  <td>{el.nasa_id}</td>
+                </tr>
+                )
+              }):null}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     

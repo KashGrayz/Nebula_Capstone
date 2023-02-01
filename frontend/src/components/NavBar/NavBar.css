@@ -20,10 +20,9 @@ li {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   position: relative;
-  
 }
 
-.navBar button {
+/* .navBar button {
   background: black;
   border: 1px solid #000000;
   padding: 0.5em 0.5rem;
@@ -38,16 +37,14 @@ li {
   background: rgba(255, 255, 255, 0.313);
   color: steelblue;
   cursor: pointer;
-}
+} */
 
 .brand {
-  cursor:crosshair;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color:black;
   color: rgb(0 0 0);
-  -webkit-text-stroke: 1 #54BCB8;
+  -webkit-text-stroke:#54BCB8;
   text-shadow: 0px 1px 6px #8effe1;
-  
 }
 
 .logo{
@@ -58,8 +55,26 @@ li {
   box-shadow: 0px 0px 6px #8effe1;
   background-color: #54BCB8;
   margin-right: 5rem;
-  
+}
 
+.juno1 {
+  background-color: rgba(0, 0, 0, 0.532);
+  backdrop-filter: blur(6px);
+  -webkit-text-stroke: .5px #083534;
+  text-shadow: 0px 1px 3px #04302f;
+  color: #54BCB8;
+  border: solid 1px #54BCB8;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.juno1:hover {
+  background-color:#54BCB8 ;
+  color: rgba(0, 0, 0, 0.532);
+  box-shadow: 0px 1px 6px 4px #72fffa;
+  text-shadow: none;
 }
 /* color: rgb(0 0 0);
 -webkit-text-stroke: 1px #54BCB8;
