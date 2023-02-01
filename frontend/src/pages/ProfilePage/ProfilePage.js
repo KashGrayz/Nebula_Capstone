@@ -34,15 +34,18 @@ const ProfilePage = () => {
   return (
     <div>
       <h3 className="welcome">Welcome {user.username}!</h3>
-      <div className="profile">
-        { isLoaded ? data.uploaded_imgs.map((el) => (
-          <><img
-          src={`http://127.0.0.1:8000${el.image}`}
-          alt={`http://127.0.0.1:8000${el.image_name}`}
-          />
-          </>
-          
-        )):null}
+      <div>
+        <h3 className="welcome2">Uploaded Images</h3><button className="juno3" type="submit">Upload Image</button>
+        <div className="profile">
+          { isLoaded ? data.uploaded_imgs.map((el) => (
+            <><img
+            src={`http://127.0.0.1:8000${el.image}`}
+            alt={`http://127.0.0.1:8000${el.image_name}`}
+            />
+            </>
+            
+          )):null}
+        </div>
       </div>
       <div className="container-data">
         <div className="InfoTable">
