@@ -51,7 +51,7 @@ function LandingPage() {
       <form onSubmit={handleSubmit} className="search">
         <input
 
-          type="text"
+          type="search"
           placeholder="Search..."
           onChange={(event) => setQuery(event.target.value)}
           value={query}

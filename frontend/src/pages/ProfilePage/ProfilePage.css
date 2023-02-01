@@ -26,7 +26,7 @@ table {
     width: 70%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);
+    box-shadow: 0px 0px 6px 4px #72fffa;
 }
 
 td{
@@ -67,7 +67,7 @@ tr:nth-child(even) {
     overflow: auto;
     height: 70vh;
     border: solid 2px #050b0b;
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);
+    box-shadow: 0px 0px 6px 4px #72fffa;
     width: 70%;
     margin-top: 1rem;
 }
@@ -94,11 +94,10 @@ tr:nth-child(even) {
   margin-top: 8rem;
   backdrop-filter: blur(6px);
   background: rgba(0, 0, 0, 0.665);
-  box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);
+  box-shadow: 0px 1px 6px 3px #c8fffd;
   color: rgb(0, 0, 0);
   -webkit-text-stroke: .5px #54BCB8;
   text-shadow: 0px 1px 3px #72fffa;
-  font-size: 17px;
 }
 
 .container-data{
@@ -121,11 +120,10 @@ tr:nth-child(even) {
     margin-top: 8rem;
     backdrop-filter: blur(6px);
     background: rgba(0, 0, 0, 0.665);
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);
+    box-shadow: 0px 1px 6px 3px #c8fffd;
     color: rgb(255, 255, 255);
     -webkit-text-stroke: .5px #54BCB8;
     text-shadow: 0px 1px 3px #72fffa;
-    font-size: 17px;
     font-weight:600;
 }
 
@@ -145,7 +143,6 @@ tr:nth-child(even) {
   margin-top: 1rem;
   margin-bottom: .5rem;
   margin: auto;
-  font-size: 18px;
 }
 
 .juno3:hover {

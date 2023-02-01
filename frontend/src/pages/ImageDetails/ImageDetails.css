@@ -14,7 +14,7 @@
     display: flex;
     padding: 1rem;
     border: solid 2px #050b0b;
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);;
+    box-shadow: 0px 1px 6px 4px #c8fffd;
     background: rgba(0, 0, 0, 0.778);
     backdrop-filter: blur(6px);
     width: 85%;
@@ -109,7 +109,7 @@ div > p{
     overflow: auto;
     height: 80vh;
     border: solid 2px #050b0b;
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);;
+    box-shadow: 0px 1px 6px 4px #c8fffd;
    margin-bottom: 5rem;
    margin-top: 1rem;
    width: 85%;
@@ -140,7 +140,7 @@ div > p{
     margin-top: 8rem;
     backdrop-filter: blur(6px);
     background: rgba(0, 0, 0, 0.665);
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);
+    box-shadow: 0px 1px 6px 3px #c8fffd;
     color: rgb(255, 255, 255);
     -webkit-text-stroke: .5px #54BCB8;
     text-shadow: 0px 1px 3px #72fffa;

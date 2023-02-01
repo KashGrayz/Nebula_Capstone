@@ -33,7 +33,7 @@ const LoginPage = () => {
         <label>
           Password:{" "}
           <input
-            type="text"
+            type="password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
@@ -42,7 +42,7 @@ const LoginPage = () => {
         {isServerError ? (
           <p className="error">Login failed, incorrect credentials!</p>
         ) : null}
-        <Link to="/register">Click to register!</Link>
+        <Link to="/register" style={{ textDecoration: "none", color:"white"}}>Click to register!</Link>
         <button className="juno1">Login!</button>
       </form>
     </div>

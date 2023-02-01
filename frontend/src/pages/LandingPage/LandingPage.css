@@ -17,8 +17,7 @@
     overflow: auto;
     height: 91vh;
     border: solid 2px #050b0b;
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);;
-   
+    box-shadow: 0px 1px 6px 5px #c8fffd;  
 }
 
 .photo > img {
@@ -36,7 +35,7 @@
     transform: scale3d();
     border: solid 1px #54BCB8;
     box-shadow: 0px 1px 6px 4px #72fffa;
-  }
+}
 
 div > h3{
 
@@ -51,7 +50,7 @@ div > h3{
     margin-top: 8rem;
     backdrop-filter: blur(6px);
     background: rgba(0, 0, 0, 0.665);
-    box-shadow: 0px 1px 6px 4px rgb(255, 113, 113);;
+    box-shadow: 0px 1px 6px 3px #c8fffd;
     color: rgb(255, 255, 255);
     -webkit-text-stroke: .5px #54BCB8;
     text-shadow: 0px 1px 3px #72fffa;
@@ -63,7 +62,6 @@ div > h3{
     padding: .75rem;
     display: flex;
     justify-content: center;
-    
 }
 
 .search > input{
@@ -74,16 +72,16 @@ div > h3{
     width:26%;
     background-color: rgba(0, 0, 0, 0.532);
     backdrop-filter: blur(6px);
-    padding: 10px;
-    color: #54BCB8;
+    padding: 5px;
+    color: #ffffff;
     border: solid 1px #54BCB8;
     /* box-shadow: 0px 1px 6px 4px #72fffa; */
     text-align:start;
     -webkit-text-stroke: .5px #083534;
     text-shadow: 0px 1px 3px #04302f;
     font: inherit;
-    
-
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .search > input:focus{

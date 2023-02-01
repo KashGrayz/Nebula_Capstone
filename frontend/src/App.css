@@ -10,7 +10,9 @@
 }
 
 body{
-  background-image: url("./two_faced_whirlpool_galaxy.jpeg");
+  background-image: url("./galaxies\ in\ hiding.jpg");
+  background-color: rgba(0, 0, 0, 0.553);
+  background-blend-mode: multiply;
   background-size:contain;
   overflow-y: auto;
   background-size: cover;
