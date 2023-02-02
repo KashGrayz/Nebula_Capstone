@@ -7,8 +7,9 @@
   padding: 0;
   box-sizing: inherit;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
 }
+
+
 
 body{
   background-image: url("./galaxies\ in\ hiding.jpg");
@@ -19,9 +20,7 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   overscroll-behavior: none;
-  background-position-y:-30rem;
   position: relative;
   
 }
@@ -30,6 +29,7 @@ html {
   box-sizing: border-box;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: calc(60% + 0.8min);
+  text-size-adjust: auto;
 }
 
 p {
@@ -50,7 +50,7 @@ p {
   justify-content: flex-end;
   gap: 1rem;
   border: solid 1px #54BCB8;
-  background: rgba(0, 0, 0, 0.665);
+  background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(6px);
   margin: auto;
   height: auto;
@@ -62,7 +62,7 @@ p {
   margin-top: 10rem;
   margin-bottom: 1rem;
   -webkit-text-stroke: .5px #083534;
-    text-shadow: 0px 1px 3px #136767;
+  text-shadow: 0px 1px 3px #136767;
   
 }
 

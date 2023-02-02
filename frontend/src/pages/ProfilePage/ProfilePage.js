@@ -77,6 +77,7 @@ const ProfilePage = () => {
             <thead>
               <tr className="InfoHeaders">
                 <td>Nasa ID</td>
+                <td>Image URL</td>
               </tr>
             </thead>
             <tbody>
@@ -84,6 +85,7 @@ const ProfilePage = () => {
                 return(
                 <tr>
                   <td>{el.nasa_id}</td>
+                  <td>{el.href}</td>
                 </tr>
                 )
               }):null}

@@ -74,7 +74,7 @@ div  p{
     gap: 1rem;
 }
 
-.juno {
+/* .juno {
     background-color: rgba(0, 0, 0, 0.532);
     backdrop-filter: blur(6px);
     -webkit-text-stroke: .5px #083534;
@@ -92,7 +92,7 @@ div  p{
     color: rgba(0, 0, 0, 0.532);
     box-shadow: 0px 1px 6px 4px #72fffa;
     text-shadow: none;
-}
+} */
 
 .related{
     --gap: 1rem;

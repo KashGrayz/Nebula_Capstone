@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom'
 import './ImageDetails.css'
 import StarRating from '../../components/StarRating/StarRating';
+import SaveImage from "../../components/SaveImage/SaveImage";
 import axios from 'axios';
  
 function ImageDetails(){
@@ -45,7 +46,7 @@ function ImageDetails(){
                 </div>
                 <div className='extras'>
                     <StarRating/>
-                    <button className='juno' type='submit'>Save Photo</button>
+                    <SaveImage state={state}/> 
                 </div>
             </div>
             <h1 className="welcome1">Related Images</h1>

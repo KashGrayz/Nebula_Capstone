@@ -46,7 +46,7 @@ tr{
 }
 
 tr:nth-child(even) {
-    background-color: #dddddda4;
+    background-color: #272626a4;
 }
 
 .profile{
