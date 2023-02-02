@@ -9,4 +9,4 @@ class Saved_Img(models.Model):
     img_description = models.TextField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     uploaded_img_id = models.ForeignKey(Uploaded_img, on_delete=models.CASCADE, null=True)
-    image = models.ImageField(upload_to="saved_imgs", null=True)
+    href = models.URLField(max_length=255, blank=True)

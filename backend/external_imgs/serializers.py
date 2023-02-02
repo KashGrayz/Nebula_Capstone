@@ -5,6 +5,6 @@ from .models import External_img
 class ExternalImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = External_img
-        fields = ["id", "user", "nasa_id", "image"]
+        fields = ["id", "user", "nasa_id", "href"]
         depth = 1
     

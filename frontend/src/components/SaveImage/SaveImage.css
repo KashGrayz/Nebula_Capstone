@@ -1,0 +1,19 @@
+.juno {
+    background-color: rgba(0, 0, 0, 0.532);
+    backdrop-filter: blur(6px);
+    -webkit-text-stroke: .5px #083534;
+    text-shadow: 0px 1px 3px #04302f;
+    color: #54BCB8;
+    border: solid 1px #54BCB8;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.juno:hover {
+    background-color:#54BCB8 ;
+    color: rgba(0, 0, 0, 0.532);
+    box-shadow: 0px 1px 6px 4px #72fffa;
+    text-shadow: none;
+}

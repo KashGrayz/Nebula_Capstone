@@ -37,7 +37,6 @@ function ImageDetails(){
                 <img className='image' src={state.image?.links[0].href} alt={state.image.data[0].title}/>
                 <div className='info'>
                     <h1 className='text'>{state.image.data[0].title}</h1>
-                    <br/>
                     <p><i className='description'>NASA ID:</i> {state.image.data[0].nasa_id}</p>
                     <p className='description'>{state.image.data[0].description.split("Read more:")[0]}</p> 
                     <p dangerouslySetInnerHTML={{ __html: state.image.data[0].description.split("Read more:")[1]}}></p>
