@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import {useNavigate} from 'react-router-dom'
 import useAuth from "../../hooks/useAuth";
 import "./ProfilePage.css"
 import axios from "axios";
@@ -11,6 +12,7 @@ const ProfilePage = () => {
   const [user, token] = useAuth();
   const [data, setData] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,11 +33,15 @@ const ProfilePage = () => {
     fetchData();
   }, [token]);
 
+  function handleClick() {
+    navigate('/upload')
+  };
+
   return (
     <div>
       <h3 className="welcome">Welcome {user.username}!</h3>
       <div>
-        <h3 className="welcome2">Uploaded Images</h3><button className="juno3" type="submit">Upload Image</button>
+        <h3 className="welcome2">Uploaded Images </h3><button className="juno3" type="submit" onClick={handleClick}>Upload Image &#9974;</button>
         <div className="profile">
           { isLoaded ? data.uploaded_imgs.map((el) => (
             <><img

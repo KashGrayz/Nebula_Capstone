@@ -28,8 +28,6 @@ body{
 html {
   box-sizing: border-box;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: calc(60% + 0.8min);
-  text-size-adjust: auto;
 }
 
 p {

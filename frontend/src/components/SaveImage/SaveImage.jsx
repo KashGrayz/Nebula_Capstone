@@ -23,8 +23,6 @@ const SaveImage = () => {
         postSaved(savedImg)
     }
         
-
-
     function postSaved() {
         axios
           .post("http://127.0.0.1:8000/api/external/", savedImg, {
@@ -41,7 +39,7 @@ const SaveImage = () => {
     }
 
     return(
-        <div>
+        <div style={{ display: "flex"}}>
             <button className='juno' type='submit' disabled={isDisabled} onClick={handleSubmit}>Save Photo</button>
         </div>
     )

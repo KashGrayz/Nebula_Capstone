@@ -8,7 +8,7 @@
 .star-rating > button:hover{
     background-color: transparent;
     border: none;
-    
+    outline:.5px aqua;
     cursor: pointer;
 }
 
@@ -17,9 +17,11 @@
 }
 .off{
     color: gray;
-    outline:.5px aqua;
+    
 }
 
 .star-rating{
     display: flex;
+    justify-content: center;
 }
+

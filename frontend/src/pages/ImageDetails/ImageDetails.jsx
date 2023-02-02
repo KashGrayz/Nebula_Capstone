@@ -46,8 +46,10 @@ function ImageDetails(){
                 </div>
                 <div className='extras'>
                     <StarRating/>
-                    <SaveImage state={state}/> 
                 </div>
+                 <div className="extras">
+                    <SaveImage state={state}/> 
+                 </div>
             </div>
             <h1 className="welcome1">Related Images</h1>
             <div className="related">
