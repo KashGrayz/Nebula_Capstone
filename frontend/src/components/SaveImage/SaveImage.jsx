@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
@@ -6,7 +6,7 @@ import './SaveImage.css'
 
 const SaveImage = () => {
     const {state} = useLocation();
-    const [isSaved, setIsSaved] = useState(false);
+    const [setIsSaved] = useState(false);
     const [user, token] = useAuth()
     const [isDisabled, setIsDisabled] = useState(false);
     
