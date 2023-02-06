@@ -7,7 +7,7 @@ import "./UploadPage.css"
 const UploadPage = () => {
 
     const [user ,token] = useAuth();
-    const [setUploadedImg] = useState(false)
+    // const [setUploadedImg] = useState(false)
     const [imageName, setImageName] = useState("");
     const [imageDesc, setImageDesc] = useState("")
     const [upDate, setUpDate] = useState("");
@@ -34,9 +34,9 @@ const UploadPage = () => {
           })
           .then((response) => {
             console.log(response.data)
-            setUploadedImg(true)
+            // setUploadedImg(true)
           })
-          .catch((error) => console.log(error));
+          .catch((error) => console.log(error.response.data , uploadForm));
 
 
     }
@@ -44,7 +44,7 @@ const UploadPage = () => {
     function handleSubmit(event){
         event.preventDefault();
         alert('Image Uploaded!')
-        postUploaded(event)
+        postUploaded()
     }
 
     return(
