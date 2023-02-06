@@ -8,35 +8,49 @@ const UploadPage = () => {
 
     const [user ,token] = useAuth();
     // const [setUploadedImg] = useState(false)
-    const [imageName, setImageName] = useState("");
-    const [imageDesc, setImageDesc] = useState("")
-    const [upDate, setUpDate] = useState("");
-    const [iFile, setIFile] = useState("");
+    const [imageName, setImageName] = useState();
+    const [imageDesc, setImageDesc] = useState()
+    const [upDate, setUpDate] = useState();
+    const [iFile, setIFile] = useState();
 
     // image: `uploaded_imgs/${iFile}`,
     
     
-    function postUploaded() {
+    async function postUploaded() {
 
-        let uploadForm = {
-        user_id:user.id,
-        image_name: imageName,
-        image_description: imageDesc,
-        upload_date: upDate,
-        image: iFile,
+        const uploadForm = FormData();
+        uploadForm.append("user_id",user.id)
+        uploadForm.append("img_name",imageName)
+        uploadForm.append("img_description",imageDesc)
+        uploadForm.append("upload_date", upDate)
+        uploadForm.append("image", iFile)
+        console.log("Preflight:",uploadForm)
+
+        try {
+            await axios
+                .post("http://127.0.0.1:8000/api/uploaded/" ,
+                uploadForm, {
+                headers: {
+                    Authorization: "Bearer " + 
+                    token,
+                },
+              });
+        } 
+        catch (error) {
+            console.log("Error in uploading image:", error.response.data)
         }
 
-        axios  
-          .post("http://127.0.0.1:8000/api/uploaded/", uploadForm, {
-            headers: {
-                Authorization : " Bearer " + token,
-            },
-          })
-          .then((response) => {
-            console.log(response.data)
-            // setUploadedImg(true)
-          })
-          .catch((error) => console.log(error.response.data , uploadForm));
+    //    await axios  
+    //       .post("http://127.0.0.1:8000/api/uploaded/", uploadForm, {
+    //         headers: {
+    //             Authorization : "Bearer " + token,
+    //         },
+    //       })
+    //       .then((response) => {
+    //         console.log(response.data)
+    //         // setUploadedImg(true)
+    //       })
+    //       .catch((error) => console.log(error.response.data , uploadForm));
 
 
     }
@@ -54,7 +68,7 @@ const UploadPage = () => {
                     Image Name: {" "}
                     <input
                     type="text"
-                    name='image_name'
+                    name='img_name'
                     value={imageName}
                     onChange={(event) => setImageName(event.target.value)}
                     />
@@ -63,7 +77,7 @@ const UploadPage = () => {
                     Image Description: {" "}
                     <textarea
                     type="text"
-                    name='image_description'
+                    name='img_description'
                     value={imageDesc}
                     rows="4"
                     cols="30"
@@ -85,7 +99,7 @@ const UploadPage = () => {
                     type="file"
                     name="image"
                     value={iFile}
-                    accept=".png, .jpg, .jpeg"
+                    accept="image/*"
                     onChange={(event) => setIFile(event.target.value)} 
                     />
                 </lable>

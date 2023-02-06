@@ -35,8 +35,8 @@ p {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 600px;
+  margin: auto;
+  max-width: auto;
   overflow: auto;
   text-align: center;
 }
