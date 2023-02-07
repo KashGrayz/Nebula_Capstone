@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './StarRating.css'
 import {Rocket} from 'react-bootstrap-icons'
+import {ChevronDoubleDown} from 'react-bootstrap-icons'
 
 
 
 const StarRating = () =>{
     const [rating, setRating] = useState(0)
+    console.log('Rating:', rating)
     return (
     <div className='star-rating'>
         {[...Array(5)].map((star,index) => {
@@ -21,6 +23,9 @@ const StarRating = () =>{
                 </button>
             );
         })}
+        <div>
+            <button className='chevron' type='submit' ><ChevronDoubleDown/></button>
+        </div>
     </div>
     )
 }   

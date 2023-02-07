@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'external_imgs',
     'saved_imgs',
     'uploaded_imgs',
+    'star_rating',
       # This app is for example use only
 ]
 
