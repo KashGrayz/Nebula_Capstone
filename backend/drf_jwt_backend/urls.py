@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/uploaded/', include('uploaded_imgs.urls')),
     path('api/saved/', include('saved_imgs.urls')),
     path('api/external/', include("external_imgs.urls")),
+    path('api/rating/', include('star_rating.urls')),
     
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
