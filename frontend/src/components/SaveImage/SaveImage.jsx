@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 import './SaveImage.css'
+import { Save2 } from 'react-bootstrap-icons'
 
 const SaveImage = () => {
     const {state} = useLocation();
@@ -40,7 +41,7 @@ const SaveImage = () => {
 
     return(
         <div style={{ display: "flex"}}>
-            <button className='juno' type='submit' disabled={isDisabled} onClick={handleSubmit}>Save Photo</button>
+            <button className='juno' type='submit' disabled={isDisabled} onClick={handleSubmit}><Save2/></button>
         </div>
     )
 }

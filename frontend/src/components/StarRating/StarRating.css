@@ -5,23 +5,20 @@
     cursor: pointer;
 }
 
-.star-rating > button:hover{
-    background-color: transparent;
-    border: none;
-    outline:.5px aqua;
-    cursor: pointer;
+.on{
+    color:#8EFFE1;
 }
 
-.on{
-    color:aqua;
-}
 .off{
     color: gray;
-    
 }
 
 .star-rating{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.star{
+    font-size: 1.2vw;
 }
 

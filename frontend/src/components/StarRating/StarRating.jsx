@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './StarRating.css'
+import {Rocket} from 'react-bootstrap-icons'
+
+
 
 const StarRating = () =>{
     const [rating, setRating] = useState(0)
@@ -14,7 +17,7 @@ const StarRating = () =>{
                     className={index <= rating ? 'on' : 'off'}
                     onClick={() => setRating(index)}
                 >
-                    <span className='star'>&#9733;</span>
+                    <span className='star'><Rocket/></span>
                 </button>
             );
         })}

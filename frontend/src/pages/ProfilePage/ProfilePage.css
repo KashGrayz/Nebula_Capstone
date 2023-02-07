@@ -93,7 +93,7 @@ tr:nth-child(even) {
   margin-bottom: 6rem;
   margin-top: 8rem;
   backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.665);
+  
   box-shadow: 0px 1px 6px 3px #c8fffd;
   color: rgb(0, 0, 0);
   -webkit-text-stroke: .5px #54BCB8;

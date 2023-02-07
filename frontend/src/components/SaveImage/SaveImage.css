@@ -1,15 +1,15 @@
 .juno{
-    background-color: rgba(0, 0, 0, 0.532);
+    background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(6px);
     -webkit-text-stroke: .5px #083534;
     text-shadow: 0px 1px 3px #04302f;
     color: #54BCB8;
     border: solid 1px #54BCB8;
-    border-radius: 15px;
+    border-radius: 20px;
     font: inherit;
     font-weight: bold;
     margin: auto;
-    padding: .75vw;
+    padding: .5vw;
     font-size: 1vw;
 }
 

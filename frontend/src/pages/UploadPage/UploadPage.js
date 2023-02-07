@@ -61,7 +61,7 @@ const UploadPage = () => {
               type="text"
               name="image_description"
               value={imageDesc}
-              rows="4"
+              rows="3"
               cols="30"
               onChange={(event) => setImageDesc(event.target.value)}
             />
@@ -83,12 +83,14 @@ const UploadPage = () => {
               onChange={handleChange}
             />
           </label>
-          <button type="submit" className="juno1">
+          <div>
+            <button type="submit" className="juno1">
             Upload
           </button>
           <button type="reset" className="juno1">
             Reset
           </button>
+          </div>
         </form>
       </div>
     );
