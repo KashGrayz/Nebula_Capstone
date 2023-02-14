@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './StarRating.css'
-import {Rocket} from 'react-bootstrap-icons'
-import {ChevronDoubleDown} from 'react-bootstrap-icons'
+import { Rocket } from 'react-bootstrap-icons'
+import { ChevronDoubleDown } from 'react-bootstrap-icons'
 import { useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';

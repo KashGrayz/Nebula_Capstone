@@ -1,7 +1,7 @@
 
 .photo{
     --gap: 1rem;
-    --num-cols:3;
+    --num-cols:4;
     box-sizing: border-box;
     padding: var(--gap);
     display: grid;
@@ -54,7 +54,7 @@ div > h3{
     color: rgb(255, 255, 255);
     -webkit-text-stroke: .5px #54BCB8;
     text-shadow: 0px 1px 3px #72fffa;
-    font-size: 17px;
+    font-size: 1vw;
 }
 
 .search{
@@ -81,7 +81,7 @@ div > h3{
     text-shadow: 0px 1px 3px #04302f;
     font: inherit;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 .search > input:focus{

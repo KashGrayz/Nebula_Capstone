@@ -24,7 +24,6 @@ const UploadPage = () => {
       image.append("img_name", imageName);
       image.append("img_description", imageDesc);
       image.append("upload_date", upDate);
-      debugger;
       try {
         await axios.post("http://127.0.0.1:8000/api/uploaded/", image, {
           headers: {
